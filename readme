@@ -1,0 +1,19 @@
+Long-Non-Coding vs Coding
+
+Takes a fasta file as input and outputs two files: 
+sequences (which is a file of sequences in fasta format)
+and predictions (which is a files of predictions that
+correspond to the sequences in sequences). In order to run
+the classification the global variables in pipeline.py must
+be updated: LIBSVM should be changed to the path to the
+directory containing the libsvm executables and WEKA should
+be changed to the path to weka.jar.
+
+Options:
+-p input file for prediction  -- REQUIRED --
+-t sequence length threshhold; default 200 
+   (must be at least 200)
+-n number of threads; default 1
+
+Note -t must be at least 200 because a sequence of length
+200 is required for a feature used in classification.
